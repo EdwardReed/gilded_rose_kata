@@ -3,7 +3,7 @@ gem 'minitest', '~> 4.7'
 require "minitest/autorun"
 require "minitest/reporters"
 
-MiniTest::Reporters.use! MiniTest::Reporters::SpecReporter.new
+Minitest::Reporters.use! [Minitest::Reporters::ProgressReporter.new(:color => true)]
 
 require_relative './gilded_rose'
 
