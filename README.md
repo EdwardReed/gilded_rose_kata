@@ -30,6 +30,18 @@ and should be ready to go.
 
 * The 'solution1' branch is a solution by [Jim Weirich](https://en.wikipedia.org/wiki/Jim_Weirich) for this kata.
 
+* Branches following 'practiceX' format are solutions that I have repeated for this kata. 
+
+
+# A Brief description of Katas
+    
+Kata originally were teaching and training methods by which successful combat techniques were preserved and passed on. Practicing kata allowed a company of persons to engage in a struggle using a systematic approach, rather than as individuals in a disorderly manner.
+
+The basic goal of kata is to preserve and transmit proven techniques and to practice self-defence. By practicing in a repetitive manner the learner develops the ability to execute those techniques and movements in a natural, reflex-like manner. Systematic practice does not mean permanently rigid. The goal is to internalize the movements and techniques of a kata so they can be executed and adapted under different circumstances, without thought or hesitation. A novice’s actions will look uneven and difficult, while a master’s appear simple and smooth.
+
+Kata is a loanword in English, from the 1950s in reference to the judo kata due to Jigoro Kano, and from the 1970s also of karate kata; but the word has come to be used as a generic term for "forms" in martial arts in general, or even figuratively applied to other fields.
+[Learn More](https://en.wikipedia.org/wiki/Kata)
+
 # Original Description of the Gilded Rose
 
 Hi and welcome to team Gilded Rose. As you know, we are a small inn
