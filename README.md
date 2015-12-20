@@ -12,16 +12,17 @@ involving this kata.
 
 The easiest way is to use bundler to install the dependencies. To do so, you need to install the bundler gem if you haven't already done so
 
-    `gem install bundler`
+    gem install bundler
 
 run bundler
 
-    `bundle`
+    bundle
 
 and should be ready to go.
 
 ## Running Tests
-  `ruby gilded_rose_test.rb`
+
+    ruby gilded_rose_test.rb
 
 ## Git Branches
 
