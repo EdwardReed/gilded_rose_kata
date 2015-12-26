@@ -8,6 +8,14 @@ def update_quality(items)
       return brie(item)
     end
 
+    if item.name == "Sulfuras, Hand of Ragnaros"
+      return sulfuras(item)
+    end
+
+    if item.name == "Backstage passes to a TAFKAL80ETC concert"
+      return backstagePass(item)
+    end
+
     if item.name != 'Aged Brie' && item.name != 'Backstage passes to a TAFKAL80ETC concert'
       if item.quality > 0
         if item.name != 'Sulfuras, Hand of Ragnaros'
@@ -83,6 +91,45 @@ def brie(item)
   item.sell_in -= 1
 end
 
+def sulfuras(item) end
+
+def backstagePass(item)
+
+  if item.quality == 50
+    item.quality -= 2
+  end
+
+  if item.sell_in == 6
+    item.quality += 1
+  end
+
+  if item.sell_in == 10
+    item.quality += 1
+  end
+
+  if item.sell_in < 0
+    item.quality = -1
+  end
+
+  if item.sell_in == 1
+    item.quality += 2
+  end
+
+  if item.sell_in == 5
+    item.quality += 2
+  end
+
+  if item.quality == 50
+    item.quality -= 1
+  end
+
+  if item.sell_in == 0
+    item.quality = -1
+  end
+
+  item.quality += 1
+  item.sell_in -= 1
+end
 # DO NOT CHANGE THINGS BELOW -----------------------------------------
 
 Item = Struct.new(:name, :sell_in, :quality)
