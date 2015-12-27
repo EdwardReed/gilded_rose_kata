@@ -79,41 +79,12 @@ end
 def sulfuras(item) end
 
 def backstagePass(item)
-
-  if item.quality == 50
-    item.quality -= 2
-  end
-
-  if item.sell_in == 6
-    item.quality += 1
-  end
-
-  if item.sell_in == 10
-    item.quality += 1
-  end
-
-  if item.sell_in < 0
-    item.quality = -1
-  end
-
-  if item.sell_in == 1
-    item.quality += 2
-  end
-
-  if item.sell_in == 5
-    item.quality += 2
-  end
-
-  if item.quality == 50
-    item.quality -= 1
-  end
-
-  if item.sell_in == 0
-    item.quality = -1
-  end
-
-  item.quality += 1
   item.sell_in -= 1
+  return if item.quality == 50
+  return item.quality = 0 if item.sell_in < 0
+  item.quality += 1
+  item.quality += 1 if item.sell_in < 10
+  item.quality += 1 if item.sell_in < 5
 end
 # DO NOT CHANGE THINGS BELOW -----------------------------------------
 
