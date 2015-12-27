@@ -63,18 +63,10 @@ def update_quality(items)
 end
 
 def normal(item)
-  if item.quality == 0
-    item.quality = 0
-    item.sell_in -= 1
-    return
-  end
-  
   item.sell_in -= 1
+  return if item.quality == 0
   item.quality -= 1
-
-  if item.sell_in < 0
-    item.quality -= 1
-  end
+  item.quality -= 1 if item.sell_in < 0
 end
 
 def brie(item)
