@@ -1,18 +1,13 @@
 def update_quality(items)
   items.each do |item|
-    if item.name == "normal"
+    case item
+    when "normal"
       return normal(item)
-    end
-
-    if item.name == "Aged Brie"
+    when "Aged Brie"
       return brie(item)
-    end
-
-    if item.name == "Sulfuras, Hand of Ragnaros"
+    when "Sulfuras, Hand of Ragnaros"
       return sulfuras(item)
-    end
-
-    if item.name == "Backstage passes to a TAFKAL80ETC concert"
+    when "Backstage passes to a TAFKAL80ETC concert"
       return backstagePass(item)
     end
 
