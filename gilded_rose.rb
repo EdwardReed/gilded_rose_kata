@@ -1,59 +1,17 @@
 def update_quality(items)
   items.each do |item|
-    case item
+   case item.name
     when "normal"
-      return normal(item)
+      normal(item)
+    when "normal item"
+      normal(item)
     when "Aged Brie"
-      return brie(item)
+      brie(item)
     when "Sulfuras, Hand of Ragnaros"
-      return sulfuras(item)
+      sulfuras(item)
     when "Backstage passes to a TAFKAL80ETC concert"
-      return backstagePass(item)
-    end
-
-    if item.name != 'Aged Brie' && item.name != 'Backstage passes to a TAFKAL80ETC concert'
-      if item.quality > 0
-        if item.name != 'Sulfuras, Hand of Ragnaros'
-          item.quality -= 1
-        end
-      end
-    else
-      if item.quality < 50
-        item.quality += 1
-        if item.name == 'Backstage passes to a TAFKAL80ETC concert'
-          if item.sell_in < 11
-            if item.quality < 50
-              item.quality += 1
-            end
-          end
-          if item.sell_in < 6
-            if item.quality < 50
-              item.quality += 1
-            end
-          end
-        end
-      end
-    end
-    if item.name != 'Sulfuras, Hand of Ragnaros'
-      item.sell_in -= 1
-    end
-    if item.sell_in < 0
-      if item.name != "Aged Brie"
-        if item.name != 'Backstage passes to a TAFKAL80ETC concert'
-          if item.quality > 0
-            if item.name != 'Sulfuras, Hand of Ragnaros'
-              item.quality -= 1
-            end
-          end
-        else
-          item.quality = item.quality - item.quality
-        end
-      else
-        if item.quality < 50
-          item.quality += 1
-        end
-      end
-    end
+      backstagePass(item)
+   end
   end
 end
 
@@ -81,6 +39,7 @@ def backstagePass(item)
   item.quality += 1 if item.sell_in < 10
   item.quality += 1 if item.sell_in < 5
 end
+
 # DO NOT CHANGE THINGS BELOW -----------------------------------------
 
 Item = Struct.new(:name, :sell_in, :quality)

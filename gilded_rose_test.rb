@@ -1,5 +1,3 @@
-gem 'minitest', '~> 4.7'
-
 require "minitest/autorun"
 require "minitest/reporters"
 
